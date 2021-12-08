@@ -1,0 +1,109 @@
+body {
+    background-image: url("img/hatter.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "h h h h h"
+                         "n ar ar as as"
+                         "f f f f f";
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    background-color: snow;
+    box-shadow: 0px 0px 15px 5px #000000;
+}
+
+header {
+    grid-area: h;
+    background-image: url("img/fejlec.jpg");
+}
+
+header h1 {
+    padding-top: 50px;
+    color: white;
+}
+
+nav {
+    grid-area: n;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: #0066ff;
+    border: 1px solid #0066ff;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    width: 50%;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+article {
+    grid-area: ar;
+}
+
+.kepek1, .kepek2 {
+    display: grid;
+    grid-template-areas: "k1 k1"
+                         "k2 k2"
+}
+
+.img1 {
+    grid-area: k1;
+    transform: rotate(10deg);
+}
+
+.img2 {
+    grid-area: k2;
+    transform: rotate(-10deg);
+}
+
+aside {
+    grid-area: as;
+    border: 1px solid gray;
+}
+
+aside h2 {
+    text-align: left;
+    padding-left: 10px;
+}
+
+aside p {
+    padding: 10px;
+}
+
+.article {
+    text-align: justify;
+}
+
+footer {
+    grid-area: f;
+    background-color: #0066ff;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-areas: "h"
+                             "n"
+                             "ar"
+                             "as"
+                             "f";
+        text-align: center;
+    }
+}
